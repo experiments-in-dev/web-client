@@ -10,6 +10,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "deploy": "./bin/deploy.sh",
+    "provision": "sh ./bin/provision.sh",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
