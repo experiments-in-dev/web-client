@@ -1,4 +1,5 @@
 AWSTemplateFormatVersion: 2010-09-09
+Description: "CICD and Deployment CloudFormation template for a static web client"
 Parameters:
   GithubOwner:
     Type: String
@@ -22,6 +23,7 @@ Mappings:
       Branch: master
     dev:
       Branch: development
+
 Resources:
   CodePipeline:
     Type: 'AWS::CodePipeline::Pipeline'
@@ -164,7 +166,7 @@ Resources:
         ComputeType: BUILD_GENERAL1_SMALL
         Type: LINUX_CONTAINER
         Image: "aws/codebuild/nodejs:8.11.0"
-        EnvironmentVariable:
+        EnvironmentVariables:
           - Name: STAGE
             Value: !Sub ${Stage}
             Type: PLAINTEXT
@@ -172,7 +174,7 @@ Resources:
             Value: !Sub "${Stage}-${GithubOwner}-${GithubRepo}"
             Type: PLAINTEXT
           - Name: DISTRIBUTION
-            Value: !Sub ${Distribution}
+            Value: !Ref Distribution
             Type: PLAINTEXT
   PipelineBucket:
     Type: 'AWS::S3::Bucket'
