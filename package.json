@@ -10,9 +10,9 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "deploy": "./bin/deploy.sh",
+    "deploy": "sh ./bin/deploy.sh",
     "provision": "sh ./bin/provision.sh",
-    "test": "react-scripts test",
+    "test": "jest",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
