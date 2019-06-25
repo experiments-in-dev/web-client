@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="App">
       <h1>
-        I was deployed by a pipeline!
+        I was deployed by a pipeline - again!
       </h1>
     </div>
   );
