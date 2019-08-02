@@ -6,7 +6,6 @@ CICD and Deployment CloudFormation template for a static web client
 ## Dependencies
 * [aws account](https://aws.amazon.com/)
 * [aws-cli](https://aws.amazon.com/cli/)
-* 
 
 ## Available Scripts
 
