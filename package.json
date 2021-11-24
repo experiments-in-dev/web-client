@@ -1,6 +1,7 @@
 {
   "name": "web-client",
   "version": "0.1.0",
+  "description": "A React web client that can be used to deploy to AWS using CloudFormation", 
   "private": true,
   "dependencies": {
     "react": "^16.13.1",
